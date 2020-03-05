@@ -51,8 +51,14 @@ class AddTeamPage extends StatefulWidget {
 class _AddTeamPage extends State<AddTeamPage> {
   //是否是自定义费率
   bool isCustomFee = false;
+
+  //设置费率字体颜色
   Color headOfficeFeeColor = UiTheme.COLOR_3655E6;
   Color customFeeColor = UiTheme.COLOR_999999;
+
+  //设置费率两个按钮的背景色
+  Color headOfficeFeeStrokeColor = UiTheme.COLOR_3655E6;
+  Color customFeeStrokeColor = UiTheme.COLOR_E6E6E6;
 
   void changeFee() {
     setState(() {
@@ -60,9 +66,13 @@ class _AddTeamPage extends State<AddTeamPage> {
       if (isCustomFee) {
         customFeeColor = UiTheme.COLOR_3655E6;
         headOfficeFeeColor = UiTheme.COLOR_999999;
+        customFeeStrokeColor = UiTheme.COLOR_3655E6;
+        headOfficeFeeStrokeColor = UiTheme.COLOR_E6E6E6;
       } else {
         customFeeColor = UiTheme.COLOR_999999;
         headOfficeFeeColor = UiTheme.COLOR_3655E6;
+        customFeeStrokeColor = UiTheme.COLOR_E6E6E6;
+        headOfficeFeeStrokeColor = UiTheme.COLOR_3655E6;
       }
     });
   }
@@ -163,7 +173,7 @@ class _AddTeamPage extends State<AddTeamPage> {
                                       topRight: Radius.circular(0),
                                     ),
                                     border: Border.all(
-                                      color: headOfficeFeeColor,
+                                      color: headOfficeFeeStrokeColor,
                                       width: 1,
                                     )),
                                 child: FlatButton(
@@ -210,7 +220,7 @@ class _AddTeamPage extends State<AddTeamPage> {
                                       topRight: Radius.circular(0),
                                     ),
                                     border: Border.all(
-                                      color: customFeeColor,
+                                      color: customFeeStrokeColor,
                                       width: 1,
                                     )),
                                 child: FlatButton(

@@ -242,7 +242,7 @@ class AddTeamPage extends StatelessWidget {
                             left: 3.5,
                           ),
                           child: Text(
-                            "支付宝",
+                            "微信",
                             style: TextStyle(
                               fontSize: 14,
                               color: UiTheme.COLOR_333333,

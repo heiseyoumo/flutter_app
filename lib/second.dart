@@ -87,7 +87,7 @@ class AddTeamPage extends StatelessWidget {
           ),
         ),
         Container(
-          padding: EdgeInsets.fromLTRB(15, 15, 40, 20),
+          padding: EdgeInsets.fromLTRB(15, 15, 15, 20),
           margin: EdgeInsets.fromLTRB(14, 0, 14, 0),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -117,39 +117,97 @@ class AddTeamPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(2.0),
-                        border:
-                            Border.all(color: UiTheme.COLOR_E6E6E6, width: 1)),
-                    child: FlatButton(
-                      child: Text(
-                        "同总部费率",
-                        style: TextStyle(
-                            fontSize: 14, color: UiTheme.COLOR_999999),
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        height: 36,
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              child: Container(
+                                width: double.maxFinite,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(2),
+                                      bottomRight: Radius.circular(2),
+                                      bottomLeft: Radius.circular(2),
+                                      topRight: Radius.circular(0),
+                                    ),
+                                    border: Border.all(
+                                      color: UiTheme.COLOR_3655E6,
+                                      width: 1,
+                                    )),
+                                child: FlatButton(
+                                  child: Text(
+                                    "调整费率",
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: UiTheme.COLOR_3655E6),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              right: 0,
+                              child: Image.asset(
+                                "assets/images/fee_selected.png",
+                                width: 22,
+                                height: 22,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(2.0),
-                        border:
-                            Border.all(color: UiTheme.COLOR_E6E6E6, width: 1)),
-                    child: FlatButton(
-                      child: Text(
-                        "自定义团队费率",
-                        style: TextStyle(
-                            fontSize: 14, color: UiTheme.COLOR_999999),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        margin: EdgeInsets.only(left: 10),
+                        height: 36,
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              child: Container(
+                                width: double.maxFinite,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(2),
+                                      bottomRight: Radius.circular(2),
+                                      bottomLeft: Radius.circular(2),
+                                      topRight: Radius.circular(0),
+                                    ),
+                                    border: Border.all(
+                                      color: UiTheme.COLOR_3655E6,
+                                      width: 1,
+                                    )),
+                                child: FlatButton(
+                                  child: Text(
+                                    "自定义团队费率",
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: UiTheme.COLOR_3655E6),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              right: 0,
+                              child: Image.asset(
+                                "assets/images/fee_selected.png",
+                                width: 22,
+                                height: 22,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              )
+                  ],
+                ),
+              ),
             ],
           ),
         ),

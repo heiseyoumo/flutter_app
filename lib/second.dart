@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/theme.dart';
@@ -188,85 +190,94 @@ class AddTeamPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Expanded(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: TextField(
+                              textAlign: TextAlign.end,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "请输入费率",
+                                hintStyle: TextStyle(
+                                  fontSize: 14,
+                                  color: UiTheme.COLOR_999999,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 5.5),
+                            child: Text(
+                              "%",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: UiTheme.COLOR_333333,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                height: 1,
+                color: UiTheme.COLOR_E6E6E6,
+              ),
+              Container(
+                height: 50,
+                child: Row(
+                  children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Text(
-                          "输入框",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: UiTheme.COLOR_333333,
-                          ),
+                        Image.asset(
+                          "assets/images/wechat.png",
+                          height: 22,
+                          width: 22,
                         ),
-                        Text(
-                          "%",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: UiTheme.COLOR_333333,
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 3.5,
+                          ),
+                          child: Text(
+                            "支付宝",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: UiTheme.COLOR_333333,
+                            ),
                           ),
                         ),
                       ],
                     ),
-                  ],
-                ),
-              ),
-              Container(
-                height: 1,
-                color: UiTheme.COLOR_E6E6E6,
-              ),
-              Container(
-                height: 50,
-                child: Row(
-                  children: <Widget>[
-                    Image.asset(
-                      "assets/images/wechat.png",
-                      height: 22,
-                      width: 22,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 3.5,
-                      ),
-                      child: Text(
-                        "微信",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: UiTheme.COLOR_333333,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                height: 1,
-                color: UiTheme.COLOR_E6E6E6,
-              ),
-              Container(
-                height: 50,
-                child: Row(
-                  children: <Widget>[
-                    Image.asset(
-                      "assets/images/quick_pay.png",
-                      height: 22,
-                      width: 22,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 3.5,
-                      ),
-                      child: Text(
-                        "云闪付",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: UiTheme.COLOR_333333,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "(支付金额≤1000)",
-                      style: TextStyle(
-                        fontSize: 10,
-                        color: UiTheme.COLOR_999999,
+                    Expanded(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: TextField(
+                              textAlign: TextAlign.end,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "请输入费率",
+                                hintStyle: TextStyle(
+                                  fontSize: 14,
+                                  color: UiTheme.COLOR_999999,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 5.5),
+                            child: Text(
+                              "%",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: UiTheme.COLOR_333333,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -280,28 +291,129 @@ class AddTeamPage extends StatelessWidget {
                 height: 50,
                 child: Row(
                   children: <Widget>[
-                    Image.asset(
-                      "assets/images/quick_pay.png",
-                      height: 22,
-                      width: 22,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 3.5,
-                      ),
-                      child: Text(
-                        "云闪付",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: UiTheme.COLOR_333333,
+                    Row(
+                      children: <Widget>[
+                        Image.asset(
+                          "assets/images/quick_pay.png",
+                          height: 22,
+                          width: 22,
                         ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 3.5,
+                          ),
+                          child: Text(
+                            "支付宝",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: UiTheme.COLOR_333333,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "(支付金额≤1000)",
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: UiTheme.COLOR_999999,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: TextField(
+                              textAlign: TextAlign.end,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "请输入费率",
+                                hintStyle: TextStyle(
+                                  fontSize: 14,
+                                  color: UiTheme.COLOR_999999,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 5.5),
+                            child: Text(
+                              "%",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: UiTheme.COLOR_333333,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    Text(
-                      "（支付金额>1000）",
-                      style: TextStyle(
-                        fontSize: 10,
-                        color: UiTheme.COLOR_999999,
+                  ],
+                ),
+              ),
+              Container(
+                height: 1,
+                color: UiTheme.COLOR_E6E6E6,
+              ),
+              Container(
+                height: 50,
+                child: Row(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Image.asset(
+                          "assets/images/quick_pay.png",
+                          height: 22,
+                          width: 22,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 3.5,
+                          ),
+                          child: Text(
+                            "支付宝",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: UiTheme.COLOR_333333,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "(支付金额>1000)",
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: UiTheme.COLOR_999999,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: TextField(
+                              textAlign: TextAlign.end,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "请输入费率",
+                                hintStyle: TextStyle(
+                                  fontSize: 14,
+                                  color: UiTheme.COLOR_999999,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 5.5),
+                            child: Text(
+                              "%",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: UiTheme.COLOR_333333,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

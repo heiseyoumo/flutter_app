@@ -168,12 +168,15 @@ class _AddTeamPage extends State<AddTeamPage> {
                                 ),
                               ),
                             ),
-                            Positioned(
-                              right: 0,
-                              child: Image.asset(
-                                "assets/images/fee_selected.png",
-                                width: 22,
-                                height: 22,
+                            Visibility(
+                              visible: !isCustomFee,
+                              child: Positioned(
+                                right: 0,
+                                child: Image.asset(
+                                  "assets/images/fee_selected.png",
+                                  width: 22,
+                                  height: 22,
+                                ),
                               ),
                             ),
                           ],
@@ -212,12 +215,15 @@ class _AddTeamPage extends State<AddTeamPage> {
                                 ),
                               ),
                             ),
-                            Positioned(
-                              right: 0,
-                              child: Image.asset(
-                                "assets/images/fee_selected.png",
-                                width: 22,
-                                height: 22,
+                            Visibility(
+                              visible: isCustomFee,
+                              child: Positioned(
+                                right: 0,
+                                child: Image.asset(
+                                  "assets/images/fee_selected.png",
+                                  width: 22,
+                                  height: 22,
+                                ),
                               ),
                             ),
                           ],

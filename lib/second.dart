@@ -120,20 +120,34 @@ class AddTeamPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  RaisedButton(
-                    child: Text(
-                      "同总部费率",
-                      style:
-                          TextStyle(fontSize: 14, color: UiTheme.COLOR_3655E6),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(2.0),
+                        border:
+                            Border.all(color: UiTheme.COLOR_E6E6E6, width: 1)),
+                    child: FlatButton(
+                      child: Text(
+                        "同总部费率",
+                        style: TextStyle(
+                            fontSize: 14, color: UiTheme.COLOR_999999),
+                      ),
                     ),
                   ),
-                  RaisedButton(
-                    child: Text(
-                      "自定义团队费率",
-                      style:
-                          TextStyle(fontSize: 14, color: UiTheme.COLOR_3655E6),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(2.0),
+                        border:
+                            Border.all(color: UiTheme.COLOR_E6E6E6, width: 1)),
+                    child: FlatButton(
+                      child: Text(
+                        "自定义团队费率",
+                        style: TextStyle(
+                            fontSize: 14, color: UiTheme.COLOR_999999),
+                      ),
                     ),
-                  )
+                  ),
                 ],
               )
             ],
@@ -303,7 +317,7 @@ class AddTeamPage extends StatelessWidget {
                             left: 3.5,
                           ),
                           child: Text(
-                            "支付宝",
+                            "云闪付",
                             style: TextStyle(
                               fontSize: 14,
                               color: UiTheme.COLOR_333333,
@@ -371,7 +385,7 @@ class AddTeamPage extends StatelessWidget {
                             left: 3.5,
                           ),
                           child: Text(
-                            "支付宝",
+                            "云闪付",
                             style: TextStyle(
                               fontSize: 14,
                               color: UiTheme.COLOR_333333,
@@ -424,9 +438,10 @@ class AddTeamPage extends StatelessWidget {
         ),
         Container(
           width: double.maxFinite,
+          color: UiTheme.COLOR_3655E6,
           margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
           height: 55,
-          child: RaisedButton(
+          child: FlatButton(
             child: Text(
               "确定",
               style: TextStyle(fontSize: 16, color: UiTheme.COLOR_WHITE),

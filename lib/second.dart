@@ -55,7 +55,7 @@ class AddTeamPage extends StatelessWidget {
                 color: Color(0x33999999),
                 offset: Offset(0.0, 5.0), //阴影xy轴偏移量
                 blurRadius: 15.0, //阴影模糊程度
-                spreadRadius: 1.0, //阴影扩散程度
+                spreadRadius: 11.0, //阴影扩散程度
               )
             ],
           ),
@@ -158,18 +158,21 @@ class AddTeamPage extends StatelessWidget {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Text(
-                          "图片",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: UiTheme.COLOR_333333,
-                          ),
+                        Image.asset(
+                          "assets/images/alipay.png",
+                          height: 22,
+                          width: 22,
                         ),
-                        Text(
-                          "支付宝",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: UiTheme.COLOR_333333,
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 3.5,
+                          ),
+                          child: Text(
+                            "支付宝",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: UiTheme.COLOR_333333,
+                            ),
                           ),
                         ),
                       ],
@@ -203,11 +206,21 @@ class AddTeamPage extends StatelessWidget {
                 height: 50,
                 child: Row(
                   children: <Widget>[
-                    Text(
-                      "微信",
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: UiTheme.COLOR_333333,
+                    Image.asset(
+                      "assets/images/wechat.png",
+                      height: 22,
+                      width: 22,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        left: 3.5,
+                      ),
+                      child: Text(
+                        "微信",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: UiTheme.COLOR_333333,
+                        ),
                       ),
                     ),
                   ],
@@ -221,11 +234,21 @@ class AddTeamPage extends StatelessWidget {
                 height: 50,
                 child: Row(
                   children: <Widget>[
-                    Text(
-                      "云闪付",
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: UiTheme.COLOR_333333,
+                    Image.asset(
+                      "assets/images/quick_pay.png",
+                      height: 22,
+                      width: 22,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        left: 3.5,
+                      ),
+                      child: Text(
+                        "云闪付",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: UiTheme.COLOR_333333,
+                        ),
                       ),
                     ),
                     Text(
@@ -246,11 +269,21 @@ class AddTeamPage extends StatelessWidget {
                 height: 50,
                 child: Row(
                   children: <Widget>[
-                    Text(
-                      "云闪付",
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: UiTheme.COLOR_333333,
+                    Image.asset(
+                      "assets/images/quick_pay.png",
+                      height: 22,
+                      width: 22,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        left: 3.5,
+                      ),
+                      child: Text(
+                        "云闪付",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: UiTheme.COLOR_333333,
+                        ),
                       ),
                     ),
                     Text(

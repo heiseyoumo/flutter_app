@@ -87,7 +87,7 @@ class AddTeamPage extends StatelessWidget {
           ),
         ),
         Container(
-          padding: EdgeInsets.fromLTRB(15, 15, 15, 20),
+          padding: EdgeInsets.fromLTRB(15, 15, 20, 20),
           margin: EdgeInsets.fromLTRB(14, 0, 14, 0),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -123,6 +123,7 @@ class AddTeamPage extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Container(
+                        margin: EdgeInsets.only(right: 10),
                         height: 36,
                         child: Stack(
                           children: <Widget>[

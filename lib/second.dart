@@ -51,10 +51,19 @@ class AddTeamPage extends StatefulWidget {
 class _AddTeamPage extends State<AddTeamPage> {
   //是否是自定义费率
   bool isCustomFee = false;
+  Color headOfficeFeeColor = UiTheme.COLOR_3655E6;
+  Color customFeeColor = UiTheme.COLOR_999999;
 
   void changeFee() {
     setState(() {
       isCustomFee = !isCustomFee;
+      if (isCustomFee) {
+        customFeeColor = UiTheme.COLOR_3655E6;
+        headOfficeFeeColor = UiTheme.COLOR_999999;
+      } else {
+        customFeeColor = UiTheme.COLOR_999999;
+        headOfficeFeeColor = UiTheme.COLOR_3655E6;
+      }
     });
   }
 
@@ -154,7 +163,7 @@ class _AddTeamPage extends State<AddTeamPage> {
                                       topRight: Radius.circular(0),
                                     ),
                                     border: Border.all(
-                                      color: UiTheme.COLOR_3655E6,
+                                      color: headOfficeFeeColor,
                                       width: 1,
                                     )),
                                 child: FlatButton(
@@ -162,7 +171,7 @@ class _AddTeamPage extends State<AddTeamPage> {
                                     "同总部费率",
                                     style: TextStyle(
                                         fontSize: 14,
-                                        color: UiTheme.COLOR_3655E6),
+                                        color: headOfficeFeeColor),
                                   ),
                                   onPressed: changeFee,
                                 ),
@@ -201,15 +210,14 @@ class _AddTeamPage extends State<AddTeamPage> {
                                       topRight: Radius.circular(0),
                                     ),
                                     border: Border.all(
-                                      color: UiTheme.COLOR_3655E6,
+                                      color: customFeeColor,
                                       width: 1,
                                     )),
                                 child: FlatButton(
                                   child: Text(
                                     "自定义团队费率",
                                     style: TextStyle(
-                                        fontSize: 14,
-                                        color: UiTheme.COLOR_3655E6),
+                                        fontSize: 14, color: customFeeColor),
                                   ),
                                   onPressed: changeFee,
                                 ),

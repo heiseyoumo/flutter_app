@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(SecondRoute());
@@ -41,11 +42,12 @@ class SecondRoute extends StatelessWidget {
 class AddTeamPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, width: 375, allowFontScaling: true);
     return Column(
       children: <Widget>[
         Container(
-          height: 55,
-          padding: EdgeInsets.fromLTRB(16, 17, 16, 17),
+          height: ScreenUtil().setWidth(55),
+          padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
           margin: EdgeInsets.fromLTRB(14, 15, 14, 10),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -66,9 +68,18 @@ class AddTeamPage extends StatelessWidget {
                 "团队名称",
                 style: TextStyle(fontSize: 14, color: UiTheme.COLOR_333333),
               ),
-              Text(
-                "团队名称1",
-                style: TextStyle(fontSize: 14, color: UiTheme.COLOR_333333),
+              Expanded(
+                child: TextField(
+                  textAlign: TextAlign.end,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "请输入团队名称",
+                    hintStyle: TextStyle(
+                      fontSize: 14,
+                      color: UiTheme.COLOR_999999,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
